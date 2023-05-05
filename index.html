@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz Game By Oğuz Kağan DOĞRU</title>
+    <style>
+       body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .question {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .answer {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px;
+        background-color: #000000;
+        color: rgb(0, 255, 128);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #4d4d4d;
+      }
+    </style>
+  </head>
+  <label>just type a, b, c or d for answer</label>
+  <body>
+    <button id="start-button">Start the game!</button>
+    <button id="info-button">Info</button>
+    <script>
+      // Dosya yolu alınıyor
+      var locationPath = window.location.pathname;
+      var dirPath = locationPath.substring(0, locationPath.lastIndexOf("/"));
+      
+      // "info.html" dosyasının yolu oluşturuluyor
+      var infoFilePath = "file://" + dirPath + "/info.html";
+      
+      
+
+
+      var locationPath = window.location.pathname;
+            console.log("Dosya yolu: " + locationPath);
+
+      function redirectToInfo() {
+        window.location.href = infoFilePath;
+      }
+
+      const infoButton = document.getElementById("info-button");
+      infoButton.addEventListener("click", redirectToInfo);
+
+      const questions = [
+        {
+          question: "Jessica eats egg, toast, olives, cheese and tomato for breakfast \n Accordingly, Jessica's breakfast ......... \n (fill in the blank)",
+          answers: ["A) jessica is eating healthy", "B) Jessica eats potatoes for breakfast", "C) Jessica has an unhealthy diet", "D) Jessica living in Chicago"],
+          correctAnswer: "a"
+        },
+        {
+          question: "What is mean Tomato, Potato and steak",
+          answers: ["A) domates, biftek ve zeytin", "B) cheese, patates ve yumurta", "C) biftek, zeytin ve ekmek", "D) domates, patates, biftek"],
+          correctAnswer: "d"
+        },
+        {
+          question: "What is mean Chops",
+          answers: ["A) Pirzola", "B) domuz pirzolası", "C) kızarmış ekmek", "D) yumurta"],
+          correctAnswer: "a"
+        },
+        {
+          question: "who is the producer?",
+          answers: ["A) Micheal Jacson", "B) Oğuz Doğru", "C) Tom Holland", "D) Messi", "E) AI"],
+          correctAnswer: "b"
+        },
+        {
+          question: "choose the unhealthy ones from the given options ( Type just numbers like 1 2 5)",
+          answers: ["1 Croissant", "2 Water", "3 Burger", "4 Egg ", "5 sousage", "6 Chocolate"],
+          correctAnswer: "1 3 5 6"
+        },
+        
+        {
+          question: "Morty's breakfast routine is here: Morty eats egg, olives, bacon, bread and drinks tea sometimes milk. \n   accordingly which one is true",
+          answers: ["A) Morty is eating healty food for breakfast", "B) Morty is eating unhealty food for breakfast", "C) Morty don't like bacons", "D) Morty's grandfather is Rick and Rick is the smartest man in the universe"],
+          correctAnswer: "a"
+        },
+
+        {
+          question: "Waiter: Welcome to our resturant. What would you like to have?\n Ted: I want a nutritious breakfast, please. \n Waiter: Our croissants are very delicious. Do you like croissants?\n Ted: No thanks, i can take an egg.\n Waiter: What about your drink?\n Ted: Tea, please.\n Waiter: OK, enjoy it According to the conversation, Ted----.",
+          answers: ["A) Likes healty food", "B) wants a cold drink", "C) Enjoys eating junk food", "D) Alwways has breakfast at home"],
+          correctAnswer: "a"
+        },
+
+        {
+          question: "John: What do you like for breakfast? \n Larry: i like cereal with milk. What about you? \n john: I prefer muffin and orange juice for breakfast",
+          answers: ["A) have diffrent food and drinks", "B) drink milk and have cereals", "C) like drinking orange juice", "D) Eat cheese and muffin"],
+          correctAnswer: "a"
+        },
+
+        {
+          question: "What is a common breakfast food in Italy?",
+          answers: ["A) Spaghetti and meatballs", "B) Croissant and coffee", "C)  Waffles and syrup", "D) Bag"],
+          correctAnswer: "b"
+        },
+
+        {
+          question: "What is a common breakfast food in Japan?",
+          answers: ["A) Pancakes and syrup", "B) Vegemite toast", "C) Scrambled eggs and bacon", "D) Rice and noodles"],
+          correctAnswer: "d"
+        },
+
+        //{
+        //  question: "What is a common food in cheneese",
+        //  answers: ["A) Pizza", "B) croissant", "C) cockroach", "Menemen"],
+        //  correctAnswer: "c",
+        //},
+
+        {
+          question: "Which country found Yogurt",
+          answers: ["A) Turkey", "B) No1", "C) Greek", "D) Cheneese"],
+          correctAnswer: "a"
+        },
+
+        {
+          question: "What type of breakfast food is commonly eaten in Mexico?",
+          answers: ["A) Tacos", "B) pizza", "C) icecream", "D) waffle"],
+          correctAnswer: "a"
+        },
+
+        {
+          question: "what is mean 'Micheal has breakfast at a resturant everymorning.'?",
+          answers: ["A) Micheal, her sabah çalıştığı restoranta gidip çalışmaya başlamaktadır", "B) Micheal kahvaltısını her sabah evinde yapar", "C) Micheal sağlıklı yiyecekleri sevmektedir", "D) Micheal her sabah kahvaltısını bir retorantta yapmaktadır"],
+          correctAnswer: "d"
+        },
+
+        {
+          question: "what is mean 'Milk' ?",
+          answers: ["A) köfte", "B) süt", "C) ekmek", "D) peynir"],
+          correctAnswer: "b"
+        },
+
+        {
+          question: "What type of meat is often included in a breakfast sandwich?",
+          answers: ["A) beef", "B) chicken", "C) ham", "D) fish"],
+          correctAnswer: "c"
+        },
+
+        {
+          question: "What is a common breakfast drink?",
+          answers: ["A) Water", "B) tea", "C) fruit juice", "D) beer"],
+          correctAnswer: "d"
+        },
+
+        {
+          question: "What type of fruit is commonly eaten with cereal or yogurt?",
+          answers: ["A) broccoli", "B) Apple", "C) carrot", "D) cabbage"],
+          correctAnswer: "b"
+        },
+
+        {
+          question: "What type of cereal is typically eaten with milk for breakfast?",
+          answers: ["A) Rice", "B) Soup", "C) salad", "D) Cornflakes"],
+          correctAnswer: "d"
+        },
+
+        {
+          question: "What is not a type of bread that is commonly eaten for breakfast?",
+          answers: ["A) toast", "B) croissant", "C) bagel", "D) Pasta"],
+          correctAnswer: "d"
+        },
+
+        {
+          question: "What is a typical English breakfast?",
+          answers: ["A) Scrambled eggs and toast", "B) Cereal with milk", "C) Eggs, bacon, and sausage", "D) Pancakes with syrup"],
+          correctAnswer: "c"
+        },
+
+        {
+          question: "Trevor: What's your favorite cereal for breakfast? \n Franklin: I love Strawberry Cheerios. What about you? \n Trevor: I like oatmeal with banana slices.\n so which one is TRUE?",
+          answers: ["A) Trevor and Franklin eating cereal for breakfast", "B) Trevor likes tacos more than cereals", "C) Franklin has lactose intolerance", "D) Franklin is wanted by the police "],
+          correctAnswer: "a"
+        },
+
+      ];
+
+      // Soruları rastgele sırala
+      questions.sort(() => Math.random() - 0.5);
+
+      // Oyunu başlatan fonksiyonu tanımlayalım.
+      function startGame() {
+        let score = 0;
+        for (let i = 0; i < questions.length; i++) {
+          let answer = prompt(questions[i].question + "\n\n" + questions[i].answers.join("\n"));
+          if (answer === questions[i].correctAnswer) {
+            alert("Correct!");
+            score++;
+          }
+           
+          else {
+            alert("Wrong!");
+          }
+        }
+        alert("Game over. Your score is " + score + "/" + questions.length);
+      }
+
+      const startButton = document.getElementById("start-button");
+      startButton.addEventListener("click", startGame);
+    </script>
+  </body>
+</html>
