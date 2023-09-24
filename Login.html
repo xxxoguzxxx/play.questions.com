@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Flip Card HTML CSS</title>
+    <link rel="stylesheet" href="logstyle.css">
+</head>
+<body>
+    <h1>Giriş Yap / Hesap Oluştur</h1>
+    <div class="boxesContainer">
+        <div class="cardBox">
+            <div class="card">
+                <div class="front">
+                    <h3>Login</h3>
+                    <p>Hover to flip</p>
+                    <strong>&#x21bb;</strong>
+                </div>
+                <div class="back">
+                    <h3>Login</h3>
+                    <form>
+                        <input type="text" placeholder="Kullanıcı Adı">
+                        <input type="password" placeholder="Şifre">
+                        <a href="#" id="loginLink">Giriş</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="cardBox">
+            <div class="card">
+                <div class="front">
+                    <h3>Kayıt Ekranı</h3>
+                    <p>Hover to flip</p>
+                    <strong>&#x21bb;</strong>
+                </div>
+                <div class="back">
+                    <h3>Kayıt Ekranı</h3>
+                    <form>
+                        <input type="text" placeholder="Ad" id="registerAd">
+                        <input type="text" placeholder="Soyad" id="registerSoyad">
+                        <input type="email" placeholder="E-posta" id="registerEmail">
+                        <input type="password" placeholder="Şifre" id="registerSifre">
+                        <a href="#" id="registerLink">Kayıt</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Giriş ve Kayıt Butonları -->
+    <button id="loginButton">Giriş</button>
+    <button id="registerButton">Kayıt</button>
+    <script src="logscript.js"></script>
+</body>
+</html>

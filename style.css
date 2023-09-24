@@ -1,0 +1,54 @@
+/* Gündüz teması için düğme stilleri */
+.day-theme {
+    background-color: #22f3f0; /* Gündüz temasının arka plan rengi */
+    color: rgb(0, 0, 0); /* Yazı rengi */
+    padding: 15px 30px; /* Yatay ve dikey iç boşluklar */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Köşe yuvarlama */
+    cursor: pointer; /* Üzerine geldiğinde imleci işaretçiye çevir */
+    font-size: 16px; /* Yazı font boyutu */
+    transition: background-color 0.3s; /* Geçiş efekti için arka plan rengini değiştirme */
+}
+
+/* Mouse üzerine gelindiğinde efekt */
+.day-theme:hover {
+    background-color: #229a8c; /* Mouse üzerine gelindiğinde arka plan rengini değiştirme */
+}
+
+/* Gece teması için düğme stilleri */
+.night-theme {
+    background-color: #333; /* Gece temasının arka plan rengi */
+    color: white; /* Yazı rengi */
+    padding: 15px 30px; /* Yatay ve dikey iç boşluklar */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Köşe yuvarlama */
+    cursor: pointer; /* Üzerine geldiğinde imleci işaretçiye çevir */
+    font-size: 16px; /* Yazı font boyutu */
+    transition: background-color 1.5s; /* Geçiş efekti için arka plan rengini değiştirme */
+}
+
+
+
+/* Ekranı ve içeriği merkezlemek için flexbox kullanıyoruz */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ekran yüksekliği */
+}
+
+/* Başlık ve alt başlık için stil ayarları */
+.container {
+    text-align: center;
+}
+
+.title {
+    font-family: sans-serif; /* Sans-serif yazı tipi kullanma */
+    font-size: 24px; /* Büyük başlık font boyutu */
+}
+
+.subtitle {
+    font-family: "Comic Sans MS", cursive; /* Comic Sans MS yazı tipi kullanma */
+    font-size: 20px; /* Küçük alt başlık font boyutu */
+}/* Gündüz teması için düğme stilleri */
+

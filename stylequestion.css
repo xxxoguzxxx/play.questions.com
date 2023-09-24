@@ -1,0 +1,123 @@
+/* Container */
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Soru başlığı */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Soru metni */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Seçenekler */
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Comic Sans MS", cursive; /* Comic Sans MS yazı tipi kullanma */
+}
+
+/* Seçenekler arası boşluk */
+label {
+    margin: 5px 0;
+    font-family: "Comic Sans MS", cursive; /* Comic Sans MS yazı tipi kullanma */
+}
+
+
+/* Cevap kontrol düğmesi */
+#checkButton {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#checkButton:hover {
+    background-color: #0056b3;
+}
+
+/* Görünmez buton */
+.invisible-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(253, 253, 253);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.custom-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    z-index: 999;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+#closePopup {
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+    #closePopup:hover {
+        background-color: #0056b3;
+    }
+
+
+
+/* Diğer stiller burada yer alacak */
+
+/* Menu butonu */
+.menu-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #d00; /* Koyu kırmızı renk */
+    color: #fff; /* Beyaz metin rengi */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none; /* Link altı çizgisini kaldırır */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Geçiş efekti */
+}
+
+    .menu-button:hover {
+        background-color: #a00; /* Daha koyu kırmızı hover rengi */
+    }

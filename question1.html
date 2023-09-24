@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Diğer meta ve stil bağlantıları -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question One</title>
+    <link rel="stylesheet" href="stylequestion.css"> <!-- CSS dosyasını ekliyoruz -->
+</head>
+<body>
+    <div class="container">
+        <h2>Question 1:</h2>
+        <p>Ekimizin Bir Üyesi Olan Doruk Nasıl Çağırılır?</p>
+
+        <div class="options">
+            <label>
+                <input type="radio" name="answer" value="one"> A) Doruk
+            </label>
+            <label>
+                <input type="radio" name="answer" value="two"> B) Köle
+            </label>
+            <label>
+                <input type="radio" name="answer" value="three"> C) TOP
+            </label>
+            <label>
+                <input type="radio" name="answer" value="four"> D) CABBAR!
+            </label>
+        </div>
+        
+        <div class="custom-popup" id="customPopup">
+            <div class="popup-content">
+                <p>Doğru! Doruğun bir lakabı bulunmamakta.</p>
+                <button id="closePopup">Close</button>
+            </div>
+        </div>
+
+        <button id="checkButton">Cevabı Kontrol Et</button>
+
+        <!-- Görünmez buton -->
+        <button id="invisibleButton" class="invisible-button">EasterEgg</button>
+
+        <a id="menuButton" class="menu-button" href="/">Menu</a>
+    </div>
+    <script src="q1script.js"></script> <!-- JavaScript dosyasını ekliyoruz -->
+</body>
+</html>
